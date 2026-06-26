@@ -162,6 +162,34 @@
     .plan ul li { font-size: 0.86rem; color: var(--muted); padding: 0.2rem 0 0.2rem 1rem; position: relative; }
     .plan ul li::before { content: "·"; position: absolute; left: 0; color: #fff; font-weight: 700; }
 
+    #entrega .inner { max-width: 1040px; max-height: calc(100vh - 5rem); overflow-y: auto; scrollbar-width: thin; }
+    .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 0.75rem; }
+    .delivery-col { border-radius: 18px; padding: 1rem 1.1rem; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.1); }
+    .delivery-col.featured { border-color: #fff; background: rgba(255,255,255,0.2); box-shadow: 0 8px 28px rgba(80,0,0,0.22); }
+    .delivery-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem; }
+    .delivery-head h3 { font-size: 1.05rem; margin: 0; }
+    .delivery-tag { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.28rem 0.55rem; border-radius: 6px; background: rgba(0,0,0,0.2); color: #ffe8e8; white-space: nowrap; }
+    .delivery-tag.rec { background: rgba(255,255,255,0.28); color: #fff; }
+    .delivery-meta { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-bottom: 0.55rem; }
+    .delivery-list { list-style: none; display: flex; flex-direction: column; gap: 0.42rem; }
+    .delivery-list li { font-size: 0.84rem; color: var(--muted); padding-left: 1.2rem; position: relative; line-height: 1.4; }
+    .delivery-list li::before { content: "✓"; position: absolute; left: 0; color: #fff; font-weight: 700; font-size: 0.78rem; }
+    .delivery-list li.extra::before { content: "+"; color: #ffe8e8; }
+    .delivery-list li.miss { opacity: 0.55; }
+    .delivery-list li.miss::before { content: "—"; color: rgba(255,255,255,0.45); }
+    .delivery-plus { margin-top: 0.55rem; padding-top: 0.55rem; border-top: 1px solid rgba(255,255,255,0.18); }
+    .delivery-plus .eyebrow { margin-bottom: 0.35rem; font-size: 0.68rem; }
+
+    .ops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 0.75rem; }
+    .ops-col { border-radius: 16px; padding: 0.85rem 1rem; background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.15); }
+    .ops-col.featured { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.1); }
+    .ops-col h3 { font-size: 0.95rem; margin-bottom: 0.45rem; }
+    .ops-steps { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .ops-steps li { font-size: 0.8rem; color: var(--muted); padding-left: 1.5rem; position: relative; }
+    .ops-steps li::before { content: attr(data-step); position: absolute; left: 0; font-family: Outfit; font-weight: 800; font-size: 0.72rem; color: #ffe0e0; }
+    .ops-steps li.bonus { color: #fff; }
+    .ops-steps li.bonus::before { content: "+"; color: #ffe8e8; }
+
     .cta-box { margin-top: 1rem; padding: 1rem 1.15rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.14); }
     .cta-box h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
     .cta-box p { font-size: 0.92rem; color: var(--muted); }
@@ -174,7 +202,7 @@
     .progress-fill { height: 100%; background: #fff; border-radius: 2px; width: 14.28%; transition: width 0.4s var(--ease); }
 
     @media (max-width: 700px) {
-      .grid-3, .grid-2, .grid-4, .grid-cases, .plans, .metric-row { grid-template-columns: 1fr; }
+      .grid-3, .grid-2, .grid-4, .grid-cases, .plans, .metric-row, .delivery-grid, .ops-grid { grid-template-columns: 1fr; }
       .nav-arrow--next { right: 1rem; }
       .slide-logo { left: 1rem; top: 1rem; }
       .flow-arrow { display: none; }
@@ -186,7 +214,7 @@
 
   <nav class="nav-dots" aria-label="Slides">
     <a href="#" data-slide="1" class="active" title="Capa"></a>
-    <a href="#" data-slide="2" title="Entrega"></a>
+    <a href="#" data-slide="2" title="Entregas"></a>
     <a href="#" data-slide="3" title="Escopo"></a>
     <a href="#" data-slide="4" title="Operação"></a>
     <a href="#" data-slide="5" title="Investimento"></a>
@@ -223,22 +251,49 @@
 
     <section id="entrega" data-slide="2">
       <div class="inner glass">
-        <span class="badge-saber">SABER · Estruturação Comercial Essencial</span>
-        <h2>O que a V4 estrutura<br />para a Couselo.</h2>
+        <span class="badge-saber">SABER · O que você recebe</span>
+        <h2>Duas versões.<br />Entregas claras.</h2>
         <div class="gold-line"></div>
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-num">01</div>
-            <h3>Diagnóstico comercial</h3>
-            <p>Mapeamento do funil revendedor, ticket, região e gargalos MQL → SQL com dados reais.</p>
+        <p class="lead">Mesmo prazo de <strong style="color:#fff;">30 dias</strong> e integração com a mídia V4 — a diferença está no que sai documentado e no apoio ao time na ponta.</p>
+        <div class="delivery-grid">
+          <article class="delivery-col">
+            <div class="delivery-head">
+              <h3>Essencial · enxuta</h3>
+              <span class="delivery-tag">Base</span>
+            </div>
+            <p class="delivery-meta">5 encontros ao vivo · estrutura o comercial</p>
+            <ul class="delivery-list">
+              <li>Diagnóstico comercial B2B revendedor (funil, ticket, região, gargalos MQL→SQL)</li>
+              <li>Processo redesenhado: lead → qualificação → proposta → pedido</li>
+              <li>Cadências de follow-up e SLAs marketing (V4) ↔ vendas (Couselo)</li>
+              <li>Painel de KPIs: MQL→SQL, tempo de 1º contato e pipeline</li>
+              <li>Handoff operacional + plano de evolução pós-projeto</li>
+              <li class="miss">Playbook comercial documentado</li>
+              <li class="miss">Treinamentos formais com o time</li>
+            </ul>
           </article>
-          <article class="card">
-            <div class="card-num">02</div>
-            <h3>Processo + SLAs</h3>
-            <p>Funil B2B, cadência de follow-up, SLA marketing (V4) ↔ vendas (Couselo).</p>
+          <article class="delivery-col featured">
+            <div class="delivery-head">
+              <h3>Completa · recomendada</h3>
+              <span class="delivery-tag rec">Tudo da Essencial +</span>
+            </div>
+            <p class="delivery-meta">5 encontros + até 3 treinamentos · time pronto para executar</p>
+            <ul class="delivery-list">
+              <li>Diagnóstico comercial B2B revendedor (funil, ticket, região, gargalos MQL→SQL)</li>
+              <li>Processo redesenhado: lead → qualificação → proposta → pedido</li>
+              <li>Cadências de follow-up e SLAs marketing (V4) ↔ vendas (Couselo)</li>
+              <li>Painel de KPIs: MQL→SQL, tempo de 1º contato e pipeline</li>
+              <li>Handoff operacional + plano de evolução pós-projeto</li>
+            </ul>
+            <div class="delivery-plus">
+              <p class="eyebrow">Só na Completa</p>
+              <ul class="delivery-list">
+                <li class="extra">Playbook comercial documentado — roteiro revendedor, objeções e scripts (Max, varão, acessórios)</li>
+                <li class="extra">Até 3 treinamentos ao vivo com o time comercial para internalizar processo e playbook</li>
+              </ul>
+            </div>
           </article>
         </div>
-        <p class="lead" style="margin-top:0.85rem;">Projeto pontual com entrega em <strong style="color:#fff;">30 dias corridos</strong> — duas opções: <strong style="color:#fff;">Essencial</strong> (diagnóstico + processo) ou <strong style="color:#fff;">Completa</strong> (+ playbook comercial e até 3 treinamentos com o time).</p>
       </div>
     </section>
 
@@ -246,22 +301,19 @@
       <div class="inner">
         <div class="grid-2">
           <div class="glass">
-            <p class="eyebrow">Incluso</p>
-            <h2>No escopo V4</h2>
+            <p class="eyebrow">Resumo rápido</p>
+            <h2>Essencial vs Completa</h2>
             <div class="gold-line"></div>
             <ul class="list">
-              <li>Diagnóstico da área comercial B2B revendedor</li>
-              <li>Redesenho do processo lead → qualificação → proposta → pedido</li>
-              <li>Cadências de follow-up e SLA entre marketing e vendas</li>
-              <li>KPIs: MQL→SQL, tempo de 1º contato, valor em pipeline</li>
-              <li>Handoff operacional + plano de evolução pós-projeto</li>
-              <li><strong style="color:#fff;">Versão Completa:</strong> playbook comercial documentado (roteiro revendedor + objeções)</li>
-              <li><strong style="color:#fff;">Versão Completa:</strong> até 3 treinamentos ao vivo com o time comercial</li>
+              <li><strong style="color:#fff;">Essencial</strong> — estrutura diagnóstico, processo, SLAs e KPIs para a Couselo rodar o comercial com clareza</li>
+              <li><strong style="color:#fff;">Completa</strong> — mesma base + playbook pronto para o time usar + até 3 treinos para colocar em prática</li>
+              <li>Ambas: 30 dias, 5 encontros ao vivo, kick-off em até 5 dias úteis</li>
+              <li>Integradas à operação de mídia V4 (mesmos leads, mesmo funil)</li>
             </ul>
           </div>
           <div class="glass">
             <p class="eyebrow">Fora do escopo</p>
-            <h2>Não incluso</h2>
+            <h2>Não incluso (nenhuma versão)</h2>
             <div class="gold-line"></div>
             <ul class="list excluded">
               <li>Contratação ou licenciamento de novo CRM</li>
@@ -269,7 +321,6 @@
               <li>Gestão contínua de mídia paga (já na assessoria V4)</li>
               <li>Produção de criativos e landing pages</li>
               <li>Configuração de CRM e automações (TER — produto à parte)</li>
-              <li>Playbook documentado e treinamentos (versão Essencial)</li>
               <li>Suporte operacional recorrente pós-projeto sem contrato</li>
             </ul>
           </div>
@@ -280,40 +331,32 @@
     <section id="operacao" data-slide="4">
       <div class="inner glass">
         <p class="eyebrow">Como opera</p>
-        <h2>30 dias.<br />5 encontros ao vivo.</h2>
+        <h2>30 dias.<br />Ritmo por versão.</h2>
         <div class="gold-line"></div>
-        <div class="flow-row">
-          <div class="flow-step">
-            <div class="icon">01</div>
-            <strong>Kick-off</strong>
-            <span>Encontro 1 · alinhamento</span>
+        <div class="ops-grid">
+          <div class="ops-col">
+            <h3>Essencial · 5 encontros</h3>
+            <ol class="ops-steps">
+              <li data-step="01">Kick-off — alinhamento com direção e vendas</li>
+              <li data-step="02">Diagnóstico — funil revendedor e dados reais</li>
+              <li data-step="03">Processo — cadências, SLAs e KPIs</li>
+              <li data-step="04">Validação — revisão do fluxo com o time</li>
+              <li data-step="05">Handoff — entrega final e plano de evolução</li>
+            </ol>
           </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">02</div>
-            <strong>Diagnóstico</strong>
-            <span>Encontro 2 · funil e dados</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">03</div>
-            <strong>Processo</strong>
-            <span>Encontro 3 · cadências e SLAs</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">04</div>
-            <strong>Playbook</strong>
-            <span>Encontro 4 · roteiro revendedor (Completa)</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">05</div>
-            <strong>Handoff</strong>
-            <span>Encontro 5 · entrega final</span>
+          <div class="ops-col featured">
+            <h3>Completa · 5 encontros + treinos</h3>
+            <ol class="ops-steps">
+              <li data-step="01">Kick-off — alinhamento com direção e vendas</li>
+              <li data-step="02">Diagnóstico — funil revendedor e dados reais</li>
+              <li data-step="03">Processo — cadências, SLAs e KPIs</li>
+              <li data-step="04">Playbook — roteiro revendedor documentado</li>
+              <li data-step="05">Handoff — entrega final e plano de evolução</li>
+              <li class="bonus">Até 3 treinamentos ao vivo — processo + playbook na prática</li>
+            </ol>
           </div>
         </div>
-        <p class="lead" style="margin-top:1rem;">Kick-off em até <strong style="color:#fff;">5 dias úteis</strong> após aprovação. Na <strong style="color:#fff;">Completa</strong>, os treinamentos entram após o playbook — até 3 sessões ao vivo com o time.</p>
+        <p class="lead" style="margin-top:0.85rem;">Kick-off em até <strong style="color:#fff;">5 dias úteis</strong> após aprovação. Encontros quinzenais com Ilan e direção comercial Couselo.</p>
       </div>
     </section>
 
