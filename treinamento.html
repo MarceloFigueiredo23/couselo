@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Couselo × V4 — Estruturação Comercial Essencial</title>
+  <title>Couselo × V4 — Treinamento Comercial · Denis Orosco</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -26,7 +26,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .blend-progress { position: fixed; top: 0; left: 0; right: 0; height: 5px; z-index: 200; background: linear-gradient(90deg, #fff, #ffd0d0); transform-origin: left; transform: scaleX(var(--slide-progress, 0.14)); transition: transform 0.4s var(--ease); }
+    .blend-progress { position: fixed; top: 0; left: 0; right: 0; height: 5px; z-index: 200; background: linear-gradient(90deg, #fff, #ffd0d0); transform-origin: left; transform: scaleX(var(--slide-progress, 0.2)); transition: transform 0.4s var(--ease); }
     .slide-logo { position: absolute; top: 1.25rem; left: 1.5rem; z-index: 10; }
     .slide-logo svg { height: clamp(22px, 3.5vh, 30px); width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); }
 
@@ -63,7 +63,7 @@
     }
 
     .inner { position: relative; z-index: 2; width: 100%; max-width: 960px; max-height: calc(100vh - 5rem); }
-    #cases .inner { max-width: 1080px; max-height: calc(100vh - 5.5rem); overflow-y: auto; scrollbar-width: thin; }
+    #entrega .inner { max-width: 1000px; }
 
     .eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #ffe0e0; margin-bottom: 0.6rem; }
     h1, h2, h3 { font-family: Outfit, sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: #fff; }
@@ -79,7 +79,7 @@
       box-shadow: 0 12px 40px rgba(80, 0, 0, 0.25);
     }
 
-    .badge-saber { display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 6px; background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 0.5rem; }
+    .badge-ter { display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 6px; background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 0.5rem; }
 
     #capa .inner { text-align: center; }
     .v4-mark { font-family: Outfit, sans-serif; font-weight: 800; font-size: 1.75rem; letter-spacing: 0.06em; }
@@ -88,25 +88,20 @@
     .capa-partnership .x { opacity: 0.5; }
     #capa h1 { font-size: clamp(2.25rem, 6.5vh, 3.5rem); margin-bottom: 0.85rem; }
     #capa h1 em { font-style: normal; color: #ffe8e8; }
-    .capa-sub { font-size: clamp(1.05rem, 2vh, 1.2rem); color: var(--muted); max-width: 580px; margin: 0 auto 1.25rem; }
+    .capa-sub { font-size: clamp(1.05rem, 2vh, 1.2rem); color: var(--muted); max-width: 600px; margin: 0 auto 1.25rem; }
     .capa-badge { display: inline-block; padding: 0.5rem 1.15rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; background: rgba(255,255,255,0.12); }
+    .capa-author { margin-top: 0.75rem; font-size: 1rem; color: #ffe8e8; font-weight: 600; }
     .slide-hint { margin-top: 1.75rem; font-size: 0.9rem; color: rgba(255,255,255,0.55); animation: pulse 2s ease infinite; }
     @keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:.7} }
 
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem; margin-top: 0.85rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55rem; margin-top: 0.75rem; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-top: 0.85rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin-top: 0.85rem; }
 
-    .card { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.22); border-radius: 16px; padding: 0.9rem 1rem; }
-    .card-num { font-family: Outfit; font-size: 0.8rem; font-weight: 800; color: #ffe0e0; margin-bottom: 0.3rem; }
-    .card h3 { font-size: 0.98rem; margin-bottom: 0.3rem; }
-    .card p { font-size: 0.88rem; color: var(--muted); line-height: 1.45; }
-
-    .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.55rem; margin-top: 0.85rem; }
-    .metric { text-align: center; padding: 0.85rem 0.5rem; border-radius: 14px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.15); }
-    .metric .val { font-family: Outfit; font-size: clamp(1.35rem, 3vh, 1.85rem); font-weight: 800; }
-    .metric .lbl { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem; line-height: 1.3; }
-    .metric.alert .val { color: #ffe8e8; }
+    .card { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.22); border-radius: 16px; padding: 0.8rem 0.9rem; }
+    .card-num { font-family: Outfit; font-size: 0.75rem; font-weight: 800; color: #ffe0e0; margin-bottom: 0.25rem; }
+    .card h3 { font-size: 0.92rem; margin-bottom: 0.25rem; }
+    .card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+    .card .dur { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 0.35rem; }
 
     .quote { margin-top: 0.85rem; padding: 0.9rem 1rem; border-radius: 14px; background: rgba(0,0,0,0.22); border-left: 3px solid #fff; font-size: 0.92rem; color: var(--muted); font-style: italic; }
 
@@ -115,44 +110,14 @@
     .list li::before { content: "✓"; position: absolute; left: 0; color: #fff; font-weight: 700; }
     .list.excluded li::before { content: "✗"; color: rgba(255,255,255,0.5); }
 
-    .grid-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 0.65rem; }
-    .case-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; overflow: hidden; }
-    .case-visual { padding: 0.5rem; background: rgba(0,0,0,0.15); }
-    .case-meta { padding: 0.75rem 0.85rem; }
-    .case-meta .tag { font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #ffe0e0; }
-    .case-meta h3 { font-size: 0.92rem; margin: 0.3rem 0 0.25rem; }
-    .case-meta p { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+    .session-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-top: 0.85rem; }
+    .session { text-align: center; padding: 0.7rem 0.5rem; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22); border-radius: 14px; }
+    .session .num { font-family: Outfit; font-size: 1.1rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .session strong { display: block; font-size: 0.82rem; margin-bottom: 0.15rem; }
+    .session span { font-size: 0.72rem; color: var(--muted); }
 
-    .mock-funnel { background: #f8fafc; border-radius: 8px; padding: 0.5rem; font-size: 0.55rem; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
-    .mock-funnel .row { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.3rem; }
-    .mock-funnel .bar { height: 18px; border-radius: 4px; background: #3b82f6; display: flex; align-items: center; padding: 0 0.35rem; color: #fff; font-weight: 700; font-size: 0.5rem; }
-    .mock-funnel .bar.warn { background: #f59e0b; width: 28%; }
-    .mock-funnel .bar.good { background: #22c55e; width: 18%; }
-    .mock-funnel .bar.leak { background: #e31c23; width: 12%; border: 2px dashed #fff; }
-    .mock-funnel label { color: #64748b; font-size: 0.48rem; min-width: 52px; }
-
-    .mock-playbook { background: #fff; border-radius: 8px; padding: 0.45rem; font-size: 0.52rem; color: #1e293b; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
-    .mock-playbook h4 { font-size: 0.58rem; color: #e31c23; margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.06em; }
-    .mock-playbook p { margin-bottom: 0.25rem; line-height: 1.35; }
-    .mock-playbook .step { padding: 0.25rem 0.35rem; background: #f1f5f9; border-radius: 4px; margin-bottom: 0.2rem; border-left: 2px solid #3b82f6; }
-
-    .mock-wa { background: #e5ddd5; border-radius: 10px; overflow: hidden; font-size: 0.52rem; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
-    .mock-wa-head { background: #075e54; color: #fff; padding: 0.35rem 0.5rem; font-weight: 700; }
-    .mock-wa-chat { padding: 0.45rem; min-height: 88px; }
-    .mock-bubble { max-width: 88%; padding: 0.3rem 0.4rem; border-radius: 6px; margin-bottom: 0.25rem; line-height: 1.35; color: #1e293b; }
-    .mock-bubble.out { background: #dcf8c6; margin-left: auto; }
-    .mock-bubble.in { background: #fff; }
-
-    .flow-row { display: flex; align-items: stretch; gap: 0.6rem; margin-top: 1.1rem; flex-wrap: wrap; }
-    .flow-step { flex: 1; min-width: 120px; text-align: center; padding: 0.85rem 0.55rem; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22); border-radius: 14px; }
-    .flow-step .icon { font-family: Outfit; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem; }
-    .flow-step strong { display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
-    .flow-step span { font-size: 0.8rem; color: var(--muted); }
-    .flow-arrow { align-self: center; color: rgba(255,255,255,0.5); }
-
-    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-    .plan { border-radius: 18px; padding: 1.2rem 1.25rem; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.12); }
-    .plan.featured { border-color: #fff; background: rgba(255,255,255,0.22); box-shadow: 0 8px 32px rgba(80,0,0,0.2); }
+    .plans { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; max-width: 480px; }
+    .plan { border-radius: 18px; padding: 1.2rem 1.25rem; border: 1px solid #fff; background: rgba(255,255,255,0.22); box-shadow: 0 8px 32px rgba(80,0,0,0.2); }
     .plan-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #ffe8e8; margin-bottom: 0.35rem; }
     .plan h3 { font-size: 1.1rem; margin-bottom: 0.2rem; }
     .plan-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.6rem; }
@@ -171,13 +136,12 @@
     .deck-footer-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
     .deck-footer { position: fixed; bottom: 0; left: 0; right: 0; z-index: 150; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; background: rgba(107, 8, 12, 0.85); border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.85rem; color: rgba(255,255,255,0.75); }
     .progress-wrap { flex: 1; max-width: 220px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; margin: 0 1rem; }
-    .progress-fill { height: 100%; background: #fff; border-radius: 2px; width: 14.28%; transition: width 0.4s var(--ease); }
+    .progress-fill { height: 100%; background: #fff; border-radius: 2px; width: 20%; transition: width 0.4s var(--ease); }
 
     @media (max-width: 700px) {
-      .grid-3, .grid-2, .grid-4, .grid-cases, .plans, .metric-row { grid-template-columns: 1fr; }
+      .grid-3, .grid-2, .session-row, .plans { grid-template-columns: 1fr; }
       .nav-arrow--next { right: 1rem; }
       .slide-logo { left: 1rem; top: 1rem; }
-      .flow-arrow { display: none; }
     }
   </style>
 </head>
@@ -214,31 +178,58 @@
           <span class="x">×</span>
           <span>Couselo</span>
         </div>
-        <h1>O marketing entregou.<br /><em>E o comercial?</em></h1>
-        <p class="capa-sub">Estruturação Comercial Essencial para a Metalúrgica Couselo — diagnóstico e processo B2B revendedor para converter a demanda que o tráfego já gera.</p>
-        <span class="capa-badge">SABER · Proposta comercial · Junho 2026</span>
+        <h1>Desenvolver o time<br /><em>que converte.</em></h1>
+        <p class="capa-sub">Treinamento comercial 100% focado no time de vendas Couselo — 6 encontros ao vivo com o especialista V4 para ganhar pegada, cadência e fechamento no canal revendedor.</p>
+        <p class="capa-author">Conduzido por Denis Orosco</p>
+        <span class="capa-badge">TER · Treinamento comercial · Junho 2026</span>
         <p class="slide-hint">Setas ← → · scroll · swipe</p>
       </div>
     </section>
 
     <section id="entrega" data-slide="2">
       <div class="inner glass">
-        <span class="badge-saber">SABER · Estruturação Comercial Essencial</span>
-        <h2>O que a V4 estrutura<br />para a Couselo.</h2>
+        <span class="badge-ter">TER · Treinamento Comercial</span>
+        <h2>6 encontros.<br />1 hora cada.</h2>
         <div class="gold-line"></div>
-        <div class="grid-2">
+        <p class="lead">Reuniões ao vivo com o time comercial Couselo — prática, simulação e ritual de vendas para leads digitais de acessórios para cortina.</p>
+        <div class="grid-3">
           <article class="card">
             <div class="card-num">01</div>
-            <h3>Diagnóstico comercial</h3>
-            <p>Mapeamento do funil revendedor, ticket, região e gargalos MQL → SQL com dados reais.</p>
+            <h3>Mindset comercial digital</h3>
+            <p>Perfil do revendedor, postura ativa e responsabilidade no funil.</p>
+            <div class="dur">1h · ao vivo</div>
           </article>
           <article class="card">
             <div class="card-num">02</div>
-            <h3>Processo + SLAs</h3>
-            <p>Funil B2B, cadência de follow-up, SLA marketing (V4) ↔ vendas (Couselo).</p>
+            <h3>Primeiro contato</h3>
+            <p>Abordagem de leads digitais — velocidade, tom e confirmação de revenda.</p>
+            <div class="dur">1h · ao vivo</div>
+          </article>
+          <article class="card">
+            <div class="card-num">03</div>
+            <h3>Qualificação B2B</h3>
+            <p>Ticket mínimo, região, mix de produtos e critérios de avanço no funil.</p>
+            <div class="dur">1h · ao vivo</div>
+          </article>
+          <article class="card">
+            <div class="card-num">04</div>
+            <h3>Proposta e negociação</h3>
+            <p>Montagem de proposta revenda, frete e condições comerciais.</p>
+            <div class="dur">1h · ao vivo</div>
+          </article>
+          <article class="card">
+            <div class="card-num">05</div>
+            <h3>Objeções e fechamento</h3>
+            <p>Simulações de objeções reais — menos “deixar o cliente à vontade”.</p>
+            <div class="dur">1h · ao vivo</div>
+          </article>
+          <article class="card">
+            <div class="card-num">06</div>
+            <h3>Follow-up e ritual</h3>
+            <p>Cadência D+1/D+3/D+7, registro de motivos e compromisso do time.</p>
+            <div class="dur">1h · ao vivo</div>
           </article>
         </div>
-        <p class="lead" style="margin-top:0.85rem;">Projeto pontual com entrega em <strong style="color:#fff;">30 dias corridos</strong> e <strong style="color:#fff;">5 encontros</strong> — alinhado ao modelo de Estruturação Comercial V4 e à operação de acessórios para cortina no canal revendedor.</p>
       </div>
     </section>
 
@@ -250,12 +241,12 @@
             <h2>No escopo V4</h2>
             <div class="gold-line"></div>
             <ul class="list">
-              <li>Diagnóstico da área comercial B2B revendedor</li>
-              <li>Redesenho do processo lead → qualificação → proposta → pedido</li>
-              <li>Roteiro de abordagem para leads digitais (trilho Max, varão, acessórios)</li>
-              <li>Cadências de follow-up e SLA entre marketing e vendas</li>
-              <li>KPIs: MQL→SQL, tempo de 1º contato, valor em pipeline</li>
-              <li>Handoff operacional + plano de evolução pós-projeto</li>
+              <li>6 treinamentos de 1h com Denis Orosco</li>
+              <li>Reuniões ao vivo com o time comercial Couselo</li>
+              <li>Simulações de abordagem, objeção e fechamento</li>
+              <li>Adaptação ao funil revendedor (trilho Max, varão, acessórios)</li>
+              <li>Material de apoio por encontro (roteiros e checklists)</li>
+              <li>Alinhamento prévio com Ilan e direção comercial</li>
             </ul>
           </div>
           <div class="glass">
@@ -263,92 +254,58 @@
             <h2>Não incluso</h2>
             <div class="gold-line"></div>
             <ul class="list excluded">
-              <li>Contratação ou licenciamento de novo CRM</li>
+              <li>Diagnóstico comercial ou redesenho de processo (SABER à parte)</li>
+              <li>Configuração de CRM e automações</li>
+              <li>Gestão de mídia paga (já na assessoria V4)</li>
               <li>Contratação de novos vendedores</li>
-              <li>Gestão contínua de mídia paga (já na assessoria V4)</li>
-              <li>Produção de criativos e landing pages</li>
-              <li>Configuração de CRM e automações (TER — produto à parte)</li>
-              <li>Treinamento comercial do time (produto à parte)</li>
-              <li>Suporte operacional recorrente pós-projeto sem contrato</li>
+              <li>Treinamentos recorrentes além das 6 sessões</li>
+              <li>Gravação e biblioteca de vídeos on-demand</li>
             </ul>
           </div>
         </div>
+        <p class="quote" style="max-width:960px;margin:0.85rem auto 0;">“A equipe precisa de uma pegada mais arrojada no digital — não deixar o cliente tão à vontade.” — direção Couselo, check-in jun/26</p>
       </div>
     </section>
 
     <section id="operacao" data-slide="4">
       <div class="inner glass">
         <p class="eyebrow">Como opera</p>
-        <h2>30 dias.<br />5 encontros ao vivo.</h2>
+        <h2>6 semanas.<br />1 encontro por semana.</h2>
         <div class="gold-line"></div>
-        <div class="flow-row">
-          <div class="flow-step">
-            <div class="icon">01</div>
-            <strong>Kick-off</strong>
-            <span>Encontro 1 · alinhamento</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">02</div>
-            <strong>Diagnóstico</strong>
-            <span>Encontro 2 · funil e dados</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">03</div>
-            <strong>Processo</strong>
-            <span>Encontro 3 · cadências e SLAs</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">04</div>
-            <strong>Playbook</strong>
-            <span>Encontro 4 · roteiro revendedor</span>
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">
-            <div class="icon">05</div>
-            <strong>Handoff</strong>
-            <span>Encontro 5 · entrega final</span>
-          </div>
+        <div class="session-row">
+          <div class="session"><div class="num">01</div><strong>Mindset</strong><span>Semana 1 · 1h</span></div>
+          <div class="session"><div class="num">02</div><strong>1º contato</strong><span>Semana 2 · 1h</span></div>
+          <div class="session"><div class="num">03</div><strong>Qualificação</strong><span>Semana 3 · 1h</span></div>
+          <div class="session"><div class="num">04</div><strong>Proposta</strong><span>Semana 4 · 1h</span></div>
+          <div class="session"><div class="num">05</div><strong>Fechamento</strong><span>Semana 5 · 1h</span></div>
+          <div class="session"><div class="num">06</div><strong>Follow-up</strong><span>Semana 6 · 1h</span></div>
         </div>
-        <p class="lead" style="margin-top:1rem;">Kick-off em até <strong style="color:#fff;">5 dias úteis</strong> após aprovação. Ritmo quinzenal com Ilan e direção comercial Couselo.</p>
+        <p class="lead" style="margin-top:1rem;">Primeiro encontro em até <strong style="color:#fff;">5 dias úteis</strong> após aprovação. Agenda fixa semanal com participação do time comercial — presencial ou remoto conforme disponibilidade Couselo.</p>
       </div>
     </section>
 
     <section id="investimento" data-slide="5">
       <div class="inner glass">
         <p class="eyebrow">Investimento · cliente V4</p>
-        <h2>Estruturar para<br />escalar com previsibilidade.</h2>
+        <h2>Investir no time<br />que fecha o funil.</h2>
         <div class="gold-line"></div>
         <div class="plans">
-          <article class="plan featured">
-            <div class="plan-label">SABER · Recomendado</div>
-            <h3>Estruturação Comercial Essencial</h3>
-            <p class="plan-sub">Pagamento único · desconto cliente V4</p>
-            <div class="plan-price">R$ 16.000</div>
-            <p class="plan-total">Ou em até 12× de R$ 1.333,33 no cartão</p>
-            <ul>
-              <li>30 dias corridos · 5 encontros ao vivo</li>
-              <li>Diagnóstico + processo comercial revendedor</li>
-              <li>Integrado à operação de mídia V4</li>
-            </ul>
-          </article>
           <article class="plan">
-            <div class="plan-label">Tabela</div>
-            <h3>Valor de referência</h3>
-            <p class="plan-sub">Mesmo escopo · sem desconto base</p>
-            <div class="plan-price" style="font-size:2rem;color:rgba(255,255,255,0.75);">R$ 20.000</div>
-            <p class="plan-total">Ou em até 10× de R$ 2.000,00 no cartão</p>
+            <div class="plan-label">TER · Treinamento Comercial</div>
+            <h3>Programa Denis Orosco · Couselo</h3>
+            <p class="plan-sub">Pagamento único · desconto cliente V4</p>
+            <div class="plan-price">R$ 10.000</div>
+            <p class="plan-total">Ou em até 10× de R$ 1.000,00 no cartão</p>
             <ul>
-              <li>Mesma entrega da Essencial</li>
-              <li>Projeto pontual one-time</li>
+              <li>6 treinamentos de 1h · ao vivo com o time</li>
+              <li>Desenvolvimento comercial no canal revendedor</li>
+              <li>Condução por Denis Orosco (V4)</li>
             </ul>
           </article>
         </div>
         <div class="cta-box">
           <h3>Próximo passo</h3>
-          <p>Validar escopo na <strong>próxima conversa com a direção Couselo</strong> e agendar kick-off da Estruturação Comercial até <strong>10 de julho de 2026</strong>.</p>
+          <p>Validar participantes do time comercial e agendar o <strong>primeiro encontro com Denis Orosco</strong> na próxima conversa com a direção Couselo.</p>
         </div>
       </div>
     </section>
@@ -357,8 +314,8 @@
 
   <footer class="deck-footer">
     <div class="deck-footer-links">
-      <span>Estruturação · R$ 16k</span>
-      <a href="treinamento.html">Treinamento Denis · R$ 10k →</a>
+      <a href="index.html">← Estruturação · R$ 16k</a>
+      <span>Treinamento Denis · R$ 10k</span>
     </div>
     <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
     <span id="slideCounter">1 / 5</span>
